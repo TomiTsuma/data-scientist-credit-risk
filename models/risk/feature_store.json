@@ -1,0 +1,7 @@
+{
+  "features": [
+    "age",
+    "income",
+    "debt_to_income"
+  ]
+}

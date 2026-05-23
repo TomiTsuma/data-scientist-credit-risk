@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "senior-data-scientist-assessment"
+version = "0.1.0"
+description = "Data science assessment project for segmentation, marketing, risk, and AI platform design."
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "*"
+numpy = "*"
+scikit-learn = "*"
+xgboost = "*"
+fastapi = "*"
+uvicorn = {extras = ["standard"], version = "*"}
+matplotlib = "*"
+seaborn = "*"
+plotly = "*"
+pyarrow = "*"
+openpyxl = "*"
+python-pptx = "*"
+Pillow = "*"
+pydantic = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+black = "*"
+isort = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
