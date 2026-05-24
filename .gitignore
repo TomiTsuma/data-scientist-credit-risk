@@ -34,3 +34,7 @@ artifacts/
 # OS
 .DS_Store
 Thumbs.db
+
+
+*.xlsx
+*.csv

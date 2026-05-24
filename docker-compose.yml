@@ -1,11 +1,29 @@
 version: '3.8'
 services:
-  api:
-    build: .
+  # api:
+  #   build: .
+  #   ports:
+  #     - "8000:8000"
+  #   volumes:
+  #     - .:/app
+  #   environment:
+  #     - PYTHONUNBUFFERED=1
+  #   command: uvicorn src.deployment.api.app:app --host 0.0.0.0 --port 8000
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    container_name: sunculture_clickhouse
     ports:
-      - "8000:8000"
-    volumes:
-      - .:/app
+      - "8123:8123"
+      - "9000:9000"
+    expose:
+      - "8123"   # HTTP
+      - "9440"   # TCP
     environment:
-      - PYTHONUNBUFFERED=1
-    command: uvicorn src.deployment.api.app:app --host 0.0.0.0 --port 8000
+      CLICKHOUSE_USER: clickhouse_user
+      CLICKHOUSE_PASSWORD: clickhouse_password
+      CLICKHOUSE_DB: sunculture_db
+    volumes:
+      - ch_data:/var/lib/clickhouse
+
+volumes:
+  ch_data:

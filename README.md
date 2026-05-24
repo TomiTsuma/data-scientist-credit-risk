@@ -29,3 +29,9 @@ pip install -r requirements.txt
 ## Notes
 
 This scaffold includes placeholder datasets, model artifacts, notebooks, and documentation to support rapid project handoff and iterative development.
+
+### Manual Clickhouse setup
+- Get-Content C:\Users\tsuma.thomas\Documents\Sunculture\src\sql\01_dimension_tables.sql | docker exec -i sunculture_clickhouse clickhouse-client --multiquery
+- Get-Content C:\Users\tsuma.thomas\Documents\Sunculture\src\sql\02_fact_tables.sql | docker exec -i sunculture_clickhouse clickhouse-client --multiquery
+- Get-Content C:\Users\tsuma.thomas\Documents\Sunculture\src\sql\03_clickhouse_dictionaries.sql | docker exec -i sunculture_clickhouse clickhouse-client --multiquery
+- Get-Content C:\Users\tsuma.thomas\Documents\Sunculture\src\sql\04_analytical_marts.sql | docker exec -i sunculture_clickhouse clickhouse-client --multiquery
