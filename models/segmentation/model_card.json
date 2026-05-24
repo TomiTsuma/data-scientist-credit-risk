@@ -1,0 +1,64 @@
+{
+  "model_type": "KMeans",
+  "n_clusters": 6,
+  "random_state": 42,
+  "k_evaluation": [
+    {
+      "k": 2,
+      "inertia": 36539.57860025263,
+      "silhouette": 0.1528973072904947,
+      "calinski_harabasz": 912.059330729271,
+      "min_cluster_pct": 38.10526315789474
+    },
+    {
+      "k": 3,
+      "inertia": 33522.78821516081,
+      "silhouette": 0.12482185559622849,
+      "calinski_harabasz": 710.5606527217996,
+      "min_cluster_pct": 29.747368421052634
+    },
+    {
+      "k": 4,
+      "inertia": 31938.73442700255,
+      "silhouette": 0.10978029203167478,
+      "calinski_harabasz": 575.5614472968723,
+      "min_cluster_pct": 16.69473684210526
+    },
+    {
+      "k": 5,
+      "inertia": 30182.72243766281,
+      "silhouette": 0.10914270244561258,
+      "calinski_harabasz": 525.7028510742568,
+      "min_cluster_pct": 16.88421052631579
+    },
+    {
+      "k": 6,
+      "inertia": 28769.048781780428,
+      "silhouette": 0.1114114374823607,
+      "calinski_harabasz": 487.7573919862658,
+      "min_cluster_pct": 13.515789473684212
+    },
+    {
+      "k": 7,
+      "inertia": 27482.65600755522,
+      "silhouette": 0.11142443147268319,
+      "calinski_harabasz": 462.40164697046544,
+      "min_cluster_pct": 8.884210526315789
+    },
+    {
+      "k": 8,
+      "inertia": 27250.84930262219,
+      "silhouette": 0.09362458520730976,
+      "calinski_harabasz": 405.3939384140744,
+      "min_cluster_pct": 8.463157894736842
+    }
+  ],
+  "segment_names": {
+    "0": "Reliable Mid-Tier",
+    "1": "Distressed Defaulters",
+    "2": "Distressed Defaulters",
+    "3": "Stable Premium Growers",
+    "4": "Arrears-Stressed PAYG",
+    "5": "Distressed Defaulters"
+  }
+}

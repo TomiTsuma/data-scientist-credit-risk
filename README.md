@@ -22,9 +22,20 @@ pip install -r requirements.txt
 
 ## Development
 
-- `docker-compose up --build` to start the API service.
+- `python scripts/run_part2_pipeline.py` — build segmentation, artifacts, and Part 2 reports.
+- `docker-compose up --build` to start ClickHouse + API (`POST /api/segment`).
 - `pytest` to run tests.
 - `python -m src.deployment.api.app` to run the FastAPI app locally.
+
+### Part 2 deliverables
+
+| Task | Report |
+|------|--------|
+| 2.1 Segmentation | `reports/business_reports/segmentation_report.md` |
+| 2.2 Marketing | `reports/business_reports/marketing_strategy.md` |
+| 2.3 Deployment | `reports/technical_reports/deployment_strategy.md` |
+| 2.4 Credit insights | `reports/business_reports/credit_risk_recommendations.md` |
+| 2.5 Risk strategy | `reports/business_reports/post_sale_risk_strategy.md` |
 
 ## Notes
 

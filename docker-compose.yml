@@ -1,14 +1,17 @@
 version: '3.8'
 services:
-  # api:
-  #   build: .
-  #   ports:
-  #     - "8000:8000"
-  #   volumes:
-  #     - .:/app
-  #   environment:
-  #     - PYTHONUNBUFFERED=1
-  #   command: uvicorn src.deployment.api.app:app --host 0.0.0.0 --port 8000
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/app/models:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+      - MODEL_PATH=/app/models/segmentation/kmeans_pipeline.joblib
+    depends_on:
+      - clickhouse
+    command: uvicorn src.deployment.api.app:app --host 0.0.0.0 --port 8000
   clickhouse:
     image: clickhouse/clickhouse-server:latest
     container_name: sunculture_clickhouse

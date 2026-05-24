@@ -1,5 +1,5 @@
 from sklearn.cluster import KMeans
 
 
-def build_kmeans_model(n_clusters: int = 4):
-    return KMeans(n_clusters=n_clusters, random_state=42)
+def build_kmeans_model(n_clusters: int = 4, random_state: int = 42) -> KMeans:
+    return KMeans(n_clusters=n_clusters, random_state=random_state, n_init="auto")

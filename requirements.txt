@@ -13,3 +13,5 @@ python-pptx
 Pillow
 pydantic
 pytest
+joblib
+clickhouse-driver
