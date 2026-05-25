@@ -15,17 +15,23 @@ This repository is structured to support an end-to-end analytics platform for cu
 ## Quick start
 
 ```powershell
-python -m venv .venv
+python3.11 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```
 
 ## Development
 
-- `python scripts/run_part2_pipeline.py` — build segmentation, artifacts, and Part 2 reports.
+- `python3.11 scripts/run_part2_pipeline.py` — build segmentation, artifacts, and Part 2 reports.
 - `docker-compose up --build` to start ClickHouse + API (`POST /api/segment`).
 - `pytest` to run tests.
-- `python -m src.deployment.api.app` to run the FastAPI app locally.
+- `python3.11 -m uvicorn src.deployment.api.app:app --reload --port 8000` to run the FastAPI app locally.
+
+### AI assistant (streaming + MCP)
+
+- `POST /api/ai/v1/chat/stream` — SSE chat (see `src/ai_platform/`)
+- `python3.11 scripts/test_streaming.py "Your question"`
+- Set `OPENAI_API_KEY` before using OpenAI provider
 
 ### Part 2 deliverables
 

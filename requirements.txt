@@ -15,3 +15,7 @@ pydantic
 pytest
 joblib
 clickhouse-driver
+fastmcp
+httpx
+pytest-asyncio
+PyYAML

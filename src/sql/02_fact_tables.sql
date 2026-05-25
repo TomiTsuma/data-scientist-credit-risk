@@ -5,7 +5,7 @@ USE sunculture_db;
 -- =========================
 CREATE TABLE fact_sales
 (
-    sale_id UInt64,
+    sale_id String,
     customer_id String,
     product_id String,
     lead_source_id UUID,
@@ -81,10 +81,9 @@ CREATE TABLE fact_lead_funnel
 
     customer_id String,
 
-    lead_source_id UInt32,
+    lead_source_id UUID,
 
     agent_id Nullable(String),
-
 
     lead_created_date Date,
     converted_to_account UInt8,
@@ -101,7 +100,7 @@ CREATE TABLE fact_lead_funnel
 )
 ENGINE = MergeTree()
 PARTITION BY toYYYYMM(lead_created_date)
-ORDER BY (country_id, lead_created_date);
+ORDER BY (lead_created_date, lead_id);
 
 -- -- =========================
 -- -- FACT: MONTHLY ACCOUNT SNAPSHOT

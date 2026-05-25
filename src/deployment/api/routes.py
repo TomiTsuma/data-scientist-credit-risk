@@ -20,7 +20,7 @@ def _load_pipeline():
         path = CONFIG.models_dir / "segmentation" / "kmeans_pipeline.joblib"
         if not path.exists():
             raise FileNotFoundError(
-                "Segmentation model not found. Run: python scripts/run_part2_pipeline.py"
+                "Segmentation model not found. Run: python3.11 scripts/run_part2_pipeline.py"
             )
         _PIPELINE = joblib.load(path)
         card_path = CONFIG.models_dir / "segmentation" / "model_card.json"

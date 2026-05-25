@@ -13,7 +13,7 @@
 ### Reproducibility
 
 ```powershell
-python scripts/run_part2_pipeline.py
+python3.11 scripts/run_part2_pipeline.py
 pytest
 docker compose up --build api
 ```

@@ -1,11 +1,3 @@
-"""
-generate_charts.py
-------------------
-Standalone version of the 02_eda_business_storytelling notebook charts.
-Saves all 5 PNGs to the reports/ directory.
-Run with:  uv run python scripts/generate_charts.py
-"""
-
 import warnings
 warnings.filterwarnings("ignore")
 

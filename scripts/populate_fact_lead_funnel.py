@@ -7,13 +7,13 @@ ETL script that reads the raw assessment Excel workbook and populates the
 Usage
 -----
     # From the project root:
-    python scripts/populate_fact_lead_funnel.py
+    python3.11 scripts/populate_fact_lead_funnel.py
 
     # Dry-run (transforms only, no DB write):
-    python scripts/populate_fact_lead_funnel.py --dry-run
+    python3.11 scripts/populate_fact_lead_funnel.py --dry-run
 
     # Point at a different Excel file:
-    python scripts/populate_fact_lead_funnel.py --source "path/to/file.xlsx"
+    python3.11 scripts/populate_fact_lead_funnel.py --source "path/to/file.xlsx"
 
 Prerequisites
 -------------

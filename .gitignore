@@ -19,11 +19,7 @@ build/
 *.egg-info/
 .eggs/
 
-# Data
-data/processed/
-models/*.pkl
-models/*.json
-artifacts/
+
 
 # VS Code
 .vscode/
@@ -36,5 +32,3 @@ artifacts/
 Thumbs.db
 
 
-*.xlsx
-*.csv

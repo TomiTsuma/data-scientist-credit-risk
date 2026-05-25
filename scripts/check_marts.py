@@ -15,7 +15,6 @@ def check_marts():
     ]
     
     for mart in marts:
-        print(f"\n================ MART: {mart} ================")
         try:
             desc = client.execute(f"DESCRIBE TABLE sunculture_db.{mart}")
             print("Columns:")

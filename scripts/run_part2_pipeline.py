@@ -1,9 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3.11
 """
 Run Part 2 predictive modelling pipeline and generate business/technical reports.
 
 Usage:
-    python scripts/run_part2_pipeline.py
+    python3.11 scripts/run_part2_pipeline.py
 """
 
 from __future__ import annotations
